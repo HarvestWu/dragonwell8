@@ -39,7 +39,7 @@ subrepos="corba jaxp jaxws langtools jdk hotspot nashorn"
 GITURL="git@github.com:alibaba"
 REPO_PREFIX="dragonwell8_"
 DEPTH=1000
-BRANCH="master"
+BRANCH="dragonwell-8.5.5_jdk8u275-b0"
 
 usage() {
       echo "usage: $0 [-h|--help] [-b|--branch branch_name] [-s|--site github|gitlab]"
@@ -63,7 +63,7 @@ do
       shift;
       site=$1
       if [[ $site == "github" ]]; then
-        GITURL="git@github.com:alibaba"
+        GITURL="https://github.com/alibaba"
         REPO_PREFIX="dragonwell8_"
       elif [[ $site == "gitlab" ]]; then
         # inside alibaba
